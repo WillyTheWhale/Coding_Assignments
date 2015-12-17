@@ -1,0 +1,40 @@
+///***********************************************************************************
+
+/// Description: Computes the tax and tip on a restaurant bill, for a patron with
+
+/// a $44.50 meal charge. Tax is 6.75 percent of the meal cost. The tip is 15 percent
+
+/// of the total after adding the tax. Display the meal cost, Tax amount, tip
+
+/// amount, and total bill on the screen.
+
+/// Author: Willy Ma
+
+/// COMSC 165 Section 8326
+
+/// Date: August 23, 2015
+
+/// Status : Complete 
+
+///***********************************************************************************
+
+#include <iostream>
+#include <iomanip>
+
+main()
+{
+	const double meal_charge = 44.50;
+	const double tax	 = ( 6.75 / 100 );
+	const double tip	 = ( 15.0 / 100 );
+
+	double tax_amount	 = ( meal_charge * tax );
+	double tip_amount	 = ( meal_charge + tax_amount) * tip;
+	double total_bill	 = ( meal_charge + tax_amount + tip_amount);
+
+	cout << fixed << setprecision(2);
+	cout << "Your meal was : $" << meal_charge << endl;
+	cout << "The tax is : $" << tax_amount << endl;
+	cout << "The tip is : $" << tip_amount << endl;
+	cout << "The total charge is : $" << total_bill << endl;
+
+}
